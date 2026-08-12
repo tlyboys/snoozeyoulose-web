@@ -34,7 +34,11 @@ export function DownloadSection({ dict }: { dict: Dictionary['download'] }) {
             {dict.subtitle}
           </p>
           <Badge variant="outline" className="mt-4" asChild>
-            <a href={latestReleaseUrl} target="_blank" rel="noopener noreferrer">
+            <a
+              href={latestReleaseUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {dict.versionLabel} ↗
             </a>
           </Badge>

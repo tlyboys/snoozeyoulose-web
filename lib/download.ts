@@ -11,7 +11,10 @@ export interface DownloadEntry {
 // 下载源：GitHub 公开 release 的 latest/download 永久链接根。
 // 形如 https://github.com/<owner>/<repo>/releases/latest/download
 // 产物名不含版本号 → 永远指向最新 release，游戏发新版时官网无需改动/重新构建。
-const BASE = (process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ?? '').replace(/\/$/, '')
+const BASE = (process.env.NEXT_PUBLIC_DOWNLOAD_BASE_URL ?? '').replace(
+  /\/$/,
+  '',
+)
 
 // 与游戏 electron-builder 的 ASCII 产物名保持一致（均不含版本号）。
 const PRODUCT = 'SnoozeYouLose'
